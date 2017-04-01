@@ -17,20 +17,36 @@
  *  word=IMACOMMENT
  */
 
-
 const int CH_PD = 5;
+
+void setup_ESP(){
+
+  Serial.begin(9600);
+  
+  pinMode(CH_PD, OUTPUT);
+  
+  digitalWrite(CH_PD, LOW);
+  delay(1000);
+  digitalWrite(CH_PD, HIGH);
+  delay(2500);
+  
+  
+}
 
 void send_ESP(String command) {
   
   //Serial.print("\r\n\n******* ENVIADO *******\r\n"+command+"\r\n***********************\r\n\n");
   
-  char *command_2 = command.c_str();
-  for(int i=0; i<strlen(command_2); i++){
-    Serial.print(command_2[i]);
-  }
-  //Serial.print(command);
+  Serial.print(command);
   Serial.print("\r\n");
   delay(500);
+  
+}
+
+String recv_ESP(){
+
+
+
   
 }
 
@@ -49,12 +65,12 @@ void disconnect_AP(){
   delay(5000);
 
 }
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 void tcp_CONNECT(String serv, int port){
 
   String command = "AT+CIPSTART=\"TCP\",\""+serv+"\","+port;
   send_ESP(command);
-  delay(2500);
+  delay(10000);
 
 }
 
@@ -99,30 +115,32 @@ void tcp_GET(String url, String host){
     send_ESP(gte[i]);
   }
   delay(2500);
-  
+}
+
+int status_ESP(){
+  send_ESP("AT+CIPSTATUS");
   
 }
 
 void setup() {
-
-
-  pinMode(CH_PD, OUTPUT); 
+  Serial.begin(115200);
+  
+  pinMode(CH_PD, OUTPUT);
+  
   digitalWrite(CH_PD, LOW);
   delay(1000);
   digitalWrite(CH_PD, HIGH);
   delay(2500);
-  Serial.begin(9600);
 
+  
 
-  connect_AP("GONCALVES", "abrunheira123");
+  connect_AP("RMSF", "123456789");
 
   tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
 
-  tcp_POST("word=<h1>BENFICA</h1>", "/ist179069/RMSF/get.php", "web.tecnico.ulisboa.pt");
+  tcp_POST("word=<h1>BENFICA VAI GANHAR</h1>", "/ist179069/RMSF/get.php", "web.tecnico.ulisboa.pt");
 
   tcp_GET("/ist179069/RMSF/index.html", "web.tecnico.ulisboa.pt");
-  
-  tcp_DISCONNECT();
 
   disconnect_AP();
   
