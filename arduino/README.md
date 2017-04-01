@@ -9,4 +9,4 @@
 | GND           | GND           | -          |
 
 
-![](http://blog.filipeflop.com/wp-content/uploads/2015/06/ESP8266-Pinos.png =250x250)
+![alt-text](http://blog.filipeflop.com/wp-content/uploads/2015/06/ESP8266-Pinos.png)
