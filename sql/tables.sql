@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS check_in;
+DROP TABLE IF EXISTS checkin;
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS timestmp;
 
@@ -15,12 +15,11 @@ CREATE TABLE timestmp(
   PRIMARY KEY (day, hour)
 );
 
-CREATE TABLE check_in(
+CREATE TABLE checkin(
   id varchar(255),
   day DATE,
   hour TIME,
-  PRIMARY KEY(day, hour, id),
+  PRIMARY KEY(id, day, hour),
   FOREIGN KEY (id) REFERENCES user (id),
-  FOREIGN KEY (day) REFERENCES timestmp (day),
-  FOREIGN KEY (hour) REFERENCES timestmp (hour)
+  FOREIGN KEY (day, hour) REFERENCES timestmp (day, hour)
 );
