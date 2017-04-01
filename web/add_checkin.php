@@ -23,7 +23,7 @@
 
   if($stmt->execute()){
     echo("<center>
-            <h3> Added new checkin: id: $id @ $day @ $hour</h3>
+            <h3> Added new checkin: id $id @ $day @ $hour</h3>
           </center>
         ");
 
@@ -32,3 +32,7 @@
   }
   $connection = NULL;
 ?>
+
+<center>
+  <a href="insert.php">Home</a>
+</center>

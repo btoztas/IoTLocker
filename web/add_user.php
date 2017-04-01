@@ -30,3 +30,7 @@
   }
   $connection = NULL;
 ?>
+
+<center>
+  <a href="insert.php">Home</a>
+</center>
