@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/res/color/design_error.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
+        "source": "/Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/res/color/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    }
+]

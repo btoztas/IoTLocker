@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/values-port/values-port.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 55,
+                        "endOffset": 106
+                    }
+                }
+            }
+        ]
+    }
+]

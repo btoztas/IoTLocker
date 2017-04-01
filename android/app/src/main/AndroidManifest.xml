@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/title_activity_history"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.MainActivity" />
+        </activity>
+        <activity android:name=".AlertsActivity"></activity>
     </application>
 
 </manifest>

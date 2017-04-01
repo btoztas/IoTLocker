@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher_round.png",
+        "source": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    }
+]

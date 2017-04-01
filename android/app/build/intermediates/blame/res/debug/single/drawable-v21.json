@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/drawable-v21/avd_hide_password.xml",
+        "source": "/Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/res/drawable-v21/avd_hide_password.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml",
+        "source": "/Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/res/drawable-v21/design_password_eye.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/drawable-v21/avd_show_password.xml",
+        "source": "/Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/res/drawable-v21/avd_show_password.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    }
+]

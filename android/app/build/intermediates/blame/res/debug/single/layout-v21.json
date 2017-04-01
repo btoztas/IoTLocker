@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

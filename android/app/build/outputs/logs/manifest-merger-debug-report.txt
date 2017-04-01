@@ -1,0 +1,115 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:2:1-31:12
+	package
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:3:5-59
+		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
+application
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:5:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/brunofgo/.android/build-cache/c366288735fd3e6fbabdf3659c160ca7bbcb6c41/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.3.1] /Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/brunofgo/.android/build-cache/3602f51cf45de0d34ee306d931ea4300be1f265d/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/brunofgo/.android/build-cache/f7085438dba46b841890d46da0d184924f157014/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/brunofgo/.android/build-cache/cf889693d10d796c735c204abbcd5cc526571ad8/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/brunofgo/.android/build-cache/7516ddb23bbd15b5049b90fcbe80463053c97ef9/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/brunofgo/.android/build-cache/5ee323dade0230d9d2bbbbe9b555fde6406f7537/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/brunofgo/.android/build-cache/200a13ac35f5c243cc04d4f0f8196feea20afb81/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/brunofgo/.android/build-cache/f458b4cae367d0c23f3bbfb6bd689fe830197823/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/brunofgo/.android/build-cache/25ee5c3ceb1a66d44f1c000de3c8f315b530cf37/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/brunofgo/.android/build-cache/1fd226190db4d6dd272637ca88ac07833e6a11cc/output/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:11:9-40
+activity#pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.MainActivity
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:16:27-74
+activity#pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.HistoryActivity
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:19:9-27:20
+	android:label
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:21:13-59
+	android:parentActivityName
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:22:13-55
+	android:theme
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:23:13-56
+	android:name
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:20:13-44
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:24:13-26:93
+	android:value
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:26:17-90
+	android:name
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:25:17-63
+activity#pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.AlertsActivity
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:28:9-61
+	android:name
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:28:19-49
+uses-sdk
+INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/brunofgo/.android/build-cache/c366288735fd3e6fbabdf3659c160ca7bbcb6c41/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.3.1] /Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/brunofgo/.android/build-cache/3602f51cf45de0d34ee306d931ea4300be1f265d/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/brunofgo/.android/build-cache/f7085438dba46b841890d46da0d184924f157014/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/brunofgo/.android/build-cache/8f7848922a7fc7f15af6babb828b9c647a81820c/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /Users/brunofgo/.android/build-cache/cf889693d10d796c735c204abbcd5cc526571ad8/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] /Users/brunofgo/.android/build-cache/7516ddb23bbd15b5049b90fcbe80463053c97ef9/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/brunofgo/.android/build-cache/5ee323dade0230d9d2bbbbe9b555fde6406f7537/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/brunofgo/.android/build-cache/200a13ac35f5c243cc04d4f0f8196feea20afb81/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/brunofgo/.android/build-cache/f458b4cae367d0c23f3bbfb6bd689fe830197823/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/brunofgo/.android/build-cache/25ee5c3ceb1a66d44f1c000de3c8f315b530cf37/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/brunofgo/.android/build-cache/1fd226190db4d6dd272637ca88ac07833e6a11cc/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] /Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] /Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/brunofgo/.android/build-cache/3602f51cf45de0d34ee306d931ea4300be1f265d/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/brunofgo/.android/build-cache/f7085438dba46b841890d46da0d184924f157014/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/brunofgo/.android/build-cache/8f7848922a7fc7f15af6babb828b9c647a81820c/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/brunofgo/.android/build-cache/cf889693d10d796c735c204abbcd5cc526571ad8/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/brunofgo/.android/build-cache/7516ddb23bbd15b5049b90fcbe80463053c97ef9/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/brunofgo/.android/build-cache/5ee323dade0230d9d2bbbbe9b555fde6406f7537/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/brunofgo/.android/build-cache/200a13ac35f5c243cc04d4f0f8196feea20afb81/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/brunofgo/.android/build-cache/f458b4cae367d0c23f3bbfb6bd689fe830197823/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/brunofgo/.android/build-cache/25ee5c3ceb1a66d44f1c000de3c8f315b530cf37/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/brunofgo/.android/build-cache/1fd226190db4d6dd272637ca88ac07833e6a11cc/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] /Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] /Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/AndroidManifest.xml:26:9-47
