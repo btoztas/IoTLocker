@@ -21,7 +21,7 @@ const int CH_PD = 5;
 
 void setup_ESP(){
 
-  Serial.begin(9600);
+  Serial.begin(115200);
   
   pinMode(CH_PD, OUTPUT);
   
@@ -123,17 +123,9 @@ int status_ESP(){
 }
 
 void setup() {
-  Serial.begin(115200);
   
-  pinMode(CH_PD, OUTPUT);
+  setup_ESP();
   
-  digitalWrite(CH_PD, LOW);
-  delay(1000);
-  digitalWrite(CH_PD, HIGH);
-  delay(2500);
-
-  
-
   connect_AP("RMSF", "123456789");
 
   tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
