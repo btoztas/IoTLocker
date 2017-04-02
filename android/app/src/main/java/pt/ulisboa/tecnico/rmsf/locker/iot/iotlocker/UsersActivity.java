@@ -2,7 +2,6 @@ package pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -11,29 +10,29 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import cz.msebera.android.httpclient.Header;
 
-public class HistoryActivity extends Activity {
-
+public class UsersActivity extends Activity {
 
     ListView listview;
-    History historyObj;
-    HistoryAdapter adapter;
-    String url = "http://web.ist.utl.pt/ist179069/RMSF/get_history.php";
+    Response userObj;
+    CustomAdapter adapter;
+    String url = "http://web.ist.utl.pt/ist179069/RMSF/get_users.php";
     Gson gson;
+
     AsyncHttpClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history);
-        listview = (ListView) findViewById(R.id.history_list);
+        setContentView(R.layout.activity_users);
+        listview = (ListView) findViewById(R.id.users_list);
         client = new AsyncHttpClient();
-        client.get(HistoryActivity.this, url, new AsyncHttpResponseHandler() {
+        client.get(UsersActivity.this, url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 String responseStr = new String(responseBody);
                 gson = new Gson();
-                historyObj = gson.fromJson(responseStr, History.class);
-                adapter = new HistoryAdapter(historyObj.getHistory(), HistoryActivity.this);
+                userObj = gson.fromJson(responseStr, Response.class);
+                adapter = new CustomAdapter(userObj.getUser(), UsersActivity.this);
                 listview.setAdapter(adapter);
             }
 
@@ -42,6 +41,5 @@ public class HistoryActivity extends Activity {
 
             }
         });
-
     }
 }

@@ -95,4 +95,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_history">HistoryActivity</string>
     <string name="recent_check_in_history">Recent Check In History</string>
+    <string name="check_users">Check Users</string>
+    <string name="registered_users">Registered Users</string>
 </resources>

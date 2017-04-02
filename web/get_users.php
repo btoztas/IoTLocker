@@ -19,8 +19,9 @@
       $stmt->closeCursor();
 
       header("content-type:application/json");
-
+      echo("{\"user\":");
       echo json_encode($data);
+      echo("}");
       exit();
 
   }

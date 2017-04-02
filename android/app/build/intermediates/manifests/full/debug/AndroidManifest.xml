@@ -8,6 +8,8 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="25" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <meta-data
         android:name="android.support.VERSION"
         android:value="25.3.1" />
@@ -36,6 +38,7 @@
                 android:value="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.MainActivity" />
         </activity>
         <activity android:name="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.AlertsActivity" />
+        <activity android:name="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.UsersActivity" />
     </application>
 
 </manifest>

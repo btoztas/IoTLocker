@@ -18,4 +18,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
         startActivity(intent);
     }
+    public void goToAlerts(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, AlertsActivity.class);
+        startActivity(intent);
+    }
+    public void goToUsers(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, UsersActivity.class);
+        startActivity(intent);
+    }
 }

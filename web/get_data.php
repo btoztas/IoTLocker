@@ -45,6 +45,7 @@
   $connection = NULL;
 ?>
       <a href="insert.php">Home</a>
+      <a href="delete.php">Delete records</a>
     </center>
   </body>
 </html>

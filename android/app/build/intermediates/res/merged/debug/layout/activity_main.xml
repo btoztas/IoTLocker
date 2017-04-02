@@ -11,13 +11,23 @@
             android:layout_centerVertical="true">
 
             <Button
+                android:id="@+id/checkUsersButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/check_users"
+                android:textSize="25sp"
+                android:onClick="goToUsers"
+                />
+            <Button
                 android:id="@+id/checkAlertsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/check_alerts"
+                android:layout_below="@id/checkUsersButton"
                 android:layout_centerHorizontal="true"
                 android:textSize="25sp"
-                android:onClick="goToHistory"
+                android:onClick="goToAlerts"
                 />
             <Button
                 android:id="@+id/checkHistoryButton"
@@ -29,6 +39,7 @@
                 android:textSize="25sp"
                 android:onClick="goToHistory"
                 />
+
 
         </RelativeLayout>
 

@@ -11,7 +11,7 @@
     echo("</p>");
     exit();
   }
-  $sql = "SELECT * FROM checkin";
+  $sql = "SELECT * FROM checkin NATURAL JOIN user";
   if($stmt = $connection->prepare($sql))
   {
       $stmt->execute();
@@ -19,8 +19,9 @@
       $stmt->closeCursor();
 
       header("content-type:application/json");
-
+      echo("{\"history\":");
       echo json_encode($data);
+      echo("}");
       exit();
 
   }

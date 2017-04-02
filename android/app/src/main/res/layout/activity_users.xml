@@ -5,22 +5,20 @@
 
 
     <TextView
-        android:id="@+id/checkHistoryTitle"
+        android:id="@+id/checkUsersTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:padding="10dp"
-        android:text="@string/recent_check_in_history"
+        android:text="@string/registered_users"
         android:textAlignment="center"
         android:textSize="40dp" />
 
-
         <ListView
-            android:layout_below="@id/checkHistoryTitle"
-            android:id="@+id/history_list"
-            android:layout_width="wrap_content"
+            android:layout_below="@id/checkUsersTitle"
+            android:id="@+id/users_list"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
         </ListView>
 
 </RelativeLayout>
