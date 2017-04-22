@@ -12,30 +12,26 @@
     exit();
   }
 
-  $id = $_POST['id'];
-  $name = $_POST['name'];
-
+  $token = $_POST['id'];
   $day = date("Y-m-d");
   $hour = date("H:i:s");
 
-  $stmt = $connection->prepare("INSERT INTO user VALUES (:id, :name, :day, :hour)");
-  $stmt->bindParam(':id', $id);
-  $stmt->bindParam(':name', $name);
+  $stmt = $connection->prepare("INSERT INTO mobile VALUES (:token, :day, :hour)");
+  $stmt->bindParam(':token', $token);
   $stmt->bindParam(':day', $day);
   $stmt->bindParam(':hour', $hour);
 
   if($stmt->execute()){
     echo("<center>
-            <h3> Added new user $name with card ID $id @ $day @ $hour</h3>
+            <h3> Added new mobile with token $token @ $day @ $hour</h3>
           </center>
         ");
 
   }else{
-    echo("<center><h3>Something went wrong</h3></center>");
+    echo("<center><h3>Something went wrong when trying to add new mobile with token $token @ $day @ $hour</h3></center>");
   }
   $connection = NULL;
 ?>
-
 <center>
   <a href="index.php">Home</a>
 </center>

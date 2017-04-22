@@ -20,11 +20,13 @@
   $sql = "SELECT * FROM user";
   $result = $connection->query($sql);
   echo("{$result->rowCount()} results");
-  echo("<table border=\"1\"><tr><th>ID</th><th>Name</th></tr>");
+  echo("<table border=\"1\"><tr><th>ID</th><th>Name</th><th>Reg Day</th><th>Reg Hour</th></tr>");
   foreach ($result as $row) {
     $id = $row['id'];
     $name = $row['name'];
-    echo("<tr><td>{$id}</td><td>{$name}</td></tr>");
+    $day = $row['regday'];
+    $hour = $row['reghour'];
+    echo("<tr><td>{$id}</td><td>{$name}</td><td>{$day}</td><td>{$hour}</td></tr>");
   }
   echo("</table>");
 
@@ -42,9 +44,38 @@
   }
   echo("</table>");
 
+  echo("<h2>Alerts</h2>");
+  $sql = "SELECT * FROM alert";
+  $result = $connection->query($sql);
+  echo("{$result->rowCount()} results");
+  echo("<table border=\"1\"><tr><th>ID</th><th>Day</th><th>Hour</th><th>Description</th></tr>");
+  foreach ($result as $row) {
+    $id = $row['id'];
+    $day = $row['day'];
+    $hour = $row['hour'];
+    $description = $row['description'];
+    echo("<tr><td>{$id}</td><td>{$day}</td><td>{$hour}</td><td>{$description}</td></tr>");
+  }
+  echo("</table>");
+
+  echo("<h2>Mobiles</h2>");
+  $sql = "SELECT * FROM mobile";
+  $result = $connection->query($sql);
+  echo("{$result->rowCount()} results");
+  echo("<table border=\"1\"><tr><th>Token</th><th>Reg Day</th><th>Reg Hour</th></tr>");
+  foreach ($result as $row) {
+    $token = $row['token'];
+    $day = $row['regday'];
+    $hour = $row['reghour'];
+    echo("<tr><td>{$token}</td><td>{$day}</td><td>{$hour}</td></tr>");
+  }
+  echo("</table>");
+
+
+
   $connection = NULL;
 ?>
-      <a href="insert.php">Home</a>
+      <a href="index.php">Home</a>
       <a href="delete.php">Delete records</a>
     </center>
   </body>
