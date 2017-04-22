@@ -24,6 +24,10 @@
         "source": "/Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/res/layout/design_menu_item_action_area.xml"
     },
     {
+        "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/layout/alert_item.xml",
+        "source": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/res/layout/alert_item.xml"
+    },
+    {
         "merged": "/Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
         "source": "/Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/res/layout/abc_dialog_title_material.xml"
     },

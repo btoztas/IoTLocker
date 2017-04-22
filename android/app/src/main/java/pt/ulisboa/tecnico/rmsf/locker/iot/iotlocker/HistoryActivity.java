@@ -17,7 +17,7 @@ public class HistoryActivity extends Activity {
     ListView listview;
     History historyObj;
     HistoryAdapter adapter;
-    String url = "http://web.ist.utl.pt/ist179069/RMSF/get_history.php";
+    String url = "http://web.ist.utl.pt/ist179069/IoTLocker/get_history.php";
     Gson gson;
     AsyncHttpClient client;
 

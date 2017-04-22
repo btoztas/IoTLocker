@@ -26,7 +26,30 @@
             android:textSize="20dp"
             android:text="Bruno Goncalves"
             android:layout_toRightOf="@id/user_id"
-            android:layout_toEndOf="@id/user_id"/>
+            android:layout_toEndOf="@id/user_id"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"/>
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/user_name"
+            android:layout_toEndOf="@id/user_name">
+            <TextView
+                android:id="@+id/regday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="2017-05-02"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/reghour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text=" 10:00:00"
+                android:layout_below="@id/regday"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

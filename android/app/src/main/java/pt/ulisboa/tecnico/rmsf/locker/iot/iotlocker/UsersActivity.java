@@ -13,9 +13,9 @@ import cz.msebera.android.httpclient.Header;
 public class UsersActivity extends Activity {
 
     ListView listview;
-    Response userObj;
-    CustomAdapter adapter;
-    String url = "http://web.ist.utl.pt/ist179069/RMSF/get_users.php";
+    User userObj;
+    UserAdapter adapter;
+    String url = "http://web.ist.utl.pt/ist179069/IoTLocker/get_users.php";
     Gson gson;
 
     AsyncHttpClient client;
@@ -31,8 +31,8 @@ public class UsersActivity extends Activity {
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 String responseStr = new String(responseBody);
                 gson = new Gson();
-                userObj = gson.fromJson(responseStr, Response.class);
-                adapter = new CustomAdapter(userObj.getUser(), UsersActivity.this);
+                userObj = gson.fromJson(responseStr, User.class);
+                adapter = new UserAdapter(userObj.getUser(), UsersActivity.this);
                 listview.setAdapter(adapter);
             }
 
