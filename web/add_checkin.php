@@ -1,4 +1,5 @@
 <?php
+  include 'fcmmessage.php';
   $host = "db.ist.utl.pt";
   $user = "ist179069";
   $pass = "qpaq9059";
@@ -64,7 +65,14 @@
       echo($connection->errorInfo());
     }
 
-    // TODO: Send Alert to FIREBASE
+    $sql = "SELECT token FROM mobile";
+    $result = $connection->query($sql);
+    foreach ($result as $row) {
+      echo($row["token"]);
+      $tokens[] = $row["token"];
+    }
+  	$message_status = send_notification($tokens, $description);
+  	echo $message_status;
 
   }
   $connection = NULL;

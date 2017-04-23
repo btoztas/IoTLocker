@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "473892436300",
+    "firebase_url": "https://iotlocker-2d3b3.firebaseio.com",
+    "project_id": "iotlocker-2d3b3",
+    "storage_bucket": "iotlocker-2d3b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473892436300:android:53835b67be8d4a2d",
+        "android_client_info": {
+          "package_name": "pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473892436300-ht8731808m6an53d7i26s67hl5humr0j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker",
+            "certificate_hash": "da1e6a74c7303e7ae6b726a59dc8e623b2d6e835"
+          }
+        },
+        {
+          "client_id": "473892436300-thpqdkq65a8rt364mthitkbmda0hd03a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtWyQ4mU65aCJVlXCAuRGFpfuncb8oBVc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473892436300-thpqdkq65a8rt364mthitkbmda0hd03a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

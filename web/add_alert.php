@@ -1,4 +1,5 @@
 <?php
+  include 'fcmmessage.php';
   $host = "db.ist.utl.pt";
   $user = "ist179069";
   $pass = "qpaq9059";
@@ -19,7 +20,7 @@
   if($id == 1){
     $description = "UNAUTHORIZED USER";
   }elseif($id == 2){
-    $description = "DOOR OPENED WITHOUT AUTHENTICATION";
+    $description = "DOOR OPEN NO AUTH";
   }elseif($id == 3){
     $description = "UNUSUAL LIGHT LEVEL";
   }else{
@@ -44,10 +45,21 @@
     echo("<center><h3>Something went wrong when trying to add new alert: id $id @ $day @ $hour @ $description</h3></center>");
     echo($connection->errorInfo());
   }
+
+  $sql = "SELECT token FROM mobile";
+  $result = $connection->query($sql);
+  foreach ($result as $row) {
+    echo($row["token"]);
+    $tokens[] = $row["token"];
+  }
+
+	$message_status = send_notification($tokens, $description);
+	echo $message_status;
+
+
+
   $connection = NULL;
 
-
-  // TODO: Send Alert to FIREBASE
 
 
 ?>

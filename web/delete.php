@@ -13,7 +13,7 @@
     exit();
   }
   echo("<h2>Deleted all records</h2>");
-  $sql = "DELETE FROM checkin; DELETE FROM user";
+  $sql = "DELETE FROM alert; DELETE FROM checkin; DELETE FROM user";
   $result = $connection->query($sql);
 
 ?>
