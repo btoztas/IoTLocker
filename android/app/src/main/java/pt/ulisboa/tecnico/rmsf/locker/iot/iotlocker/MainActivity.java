@@ -9,8 +9,18 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+    }
+
+        public void goToAddUser(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, AddUser.class);
+        startActivity(intent);
     }
 
     public void goToHistory(View view)

@@ -19,12 +19,24 @@
                 android:textSize="25sp"
                 android:onClick="goToUsers"
                 />
+
+            <Button
+                android:id="@+id/addnewuserbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkUsersButton"
+                android:layout_centerHorizontal="true"
+                android:text="Add new user"
+                android:textSize="25sp"
+                android:onClick="goToAddUser"
+                />
+
             <Button
                 android:id="@+id/checkAlertsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/check_alerts"
-                android:layout_below="@id/checkUsersButton"
+                android:layout_below="@id/addnewuserbutton"
                 android:layout_centerHorizontal="true"
                 android:textSize="25sp"
                 android:onClick="goToAlerts"
@@ -39,7 +51,6 @@
                 android:textSize="25sp"
                 android:onClick="goToHistory"
                 />
-
 
         </RelativeLayout>
 

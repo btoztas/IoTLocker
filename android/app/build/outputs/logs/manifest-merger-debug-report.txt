@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:2:1-52:12
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:3:5-59
 		INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml
@@ -21,7 +21,7 @@ MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/brunofgo/.android/b
 	android:name
 		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:7:5-50:19
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:7:5-52:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/brunofgo/.android/build-cache/c366288735fd3e6fbabdf3659c160ca7bbcb6c41/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] /Users/brunofgo/.android/build-cache/a1dc9bd9676c9679b621bce81d812f0a9fa560ea/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/brunofgo/.android/build-cache/135025f608e71fa3c569b2333860d17c57bf0369/output/AndroidManifest.xml:29:5-20
@@ -45,17 +45,17 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/brunofgo/.android
 	android:label
 		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:10:9-41
 	android:supportsRtl
-		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:13:9-35
 	android:roundIcon
-		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:12:9-54
 	android:allowBackup
 		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:8:9-35
 	android:icon
 		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:9:9-43
 	android:minSdkVersion
-		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:14:9-34
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:11:9-34
 	android:theme
-		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:13:9-40
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:14:9-40
 activity#pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.MainActivity
 ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:15:9-21:20
 	android:name
@@ -97,27 +97,35 @@ ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src
 	android:name
 		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:34:25-77
 service#pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.MyFirebaseMessagingService
-ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:38:9-45:19
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:37:9-44:19
 	android:enabled
-		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:40:13-35
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:39:13-35
 	android:exported
-		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:41:13-36
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:40:13-36
 	android:name
-		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:39:13-55
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:38:13-55
 intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:42:13-44:29
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:41:13-43:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:43:17-77
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:42:17-78
 	android:name
-		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:43:25-75
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:42:25-75
 activity#pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.AlertsActivity
-ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:47:9-52
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:46:9-52
 	android:name
-		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:47:19-49
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:46:19-49
 activity#pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.UsersActivity
-ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:48:9-51
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:47:9-51
 	android:name
-		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:48:19-48
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:47:19-48
+activity#pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.AddUser
+ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:48:9-51:68
+	android:label
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:50:13-60
+	android:theme
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:51:13-56
+	android:name
+		ADDED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml:49:13-36
 uses-sdk
 INJECTED from /Users/brunofgo/Dropbox/Bruno/4ANO2SEM/RMSF/IoTLocker/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/brunofgo/.android/build-cache/c366288735fd3e6fbabdf3659c160ca7bbcb6c41/output/AndroidManifest.xml:5:5-7:41

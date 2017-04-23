@@ -20,13 +20,20 @@
   $sql = "SELECT * FROM user";
   $result = $connection->query($sql);
   echo("{$result->rowCount()} results");
-  echo("<table border=\"1\"><tr><th>ID</th><th>Name</th><th>Reg Day</th><th>Reg Hour</th></tr>");
+  echo("<table border=\"1\"><tr><th>ID</th><th>Name</th><th>Reg Day</th><th>Reg Hour</th><th>Remove</th></tr>");
   foreach ($result as $row) {
     $id = $row['id'];
     $name = $row['name'];
     $day = $row['regday'];
     $hour = $row['reghour'];
-    echo("<tr><td>{$id}</td><td>{$name}</td><td>{$day}</td><td>{$hour}</td></tr>");
+    echo("<tr><td>{$id}</td><td>{$name}</td><td>{$day}</td><td>{$hour}</td><td>
+
+    <form action=\"delete_user.php\" method=\"POST\">
+      <input type=\"hidden\" value=\"{$id}\" name=\"id\" />
+      <input type=\"submit\" value=\"Remove\">
+    </form>
+
+    </td></tr>");
   }
   echo("</table>");
 

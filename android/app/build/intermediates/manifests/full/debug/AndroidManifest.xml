@@ -65,7 +65,10 @@
 
         <activity android:name="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.AlertsActivity" />
         <activity android:name="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.UsersActivity" />
-
+        <activity
+            android:name="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.AddUser"
+            android:label="@string/title_activity_add_user"
+            android:theme="@style/AppTheme.NoActionBar" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
