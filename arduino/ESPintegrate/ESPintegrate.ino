@@ -16,7 +16,11 @@
  *
  *  word=IMACOMMENT
  */
+ 
 
+
+char receivedserial[2000];
+const int switchPin = 2;
 const int CH_PD = 5;
 
 void setup_ESP(){
@@ -43,18 +47,15 @@ void send_ESP(String command) {
 
 }
 
-String recv_ESP(){
-
-
-
-
-}
-
 void connect_AP(String ap, String password){
 
   String command = "AT+CWJAP_CUR=\""+ap+"\",\""+password+"\"";
   send_ESP(command);
-  delay(10000);
+  if(Serial.find("OK")){
+      delay(5000);
+  }else{
+    connect_AP("RMSF", "123456789");
+  }
 
 }
 
@@ -70,7 +71,11 @@ void tcp_CONNECT(String serv, int port){
 
   String command = "AT+CIPSTART=\"TCP\",\""+serv+"\","+port;
   send_ESP(command);
-  delay(10000);
+  if(Serial.find("OK")){
+      delay(5000);
+  }else{
+    tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+  }
 
 }
 
@@ -125,14 +130,18 @@ int status_ESP(){
 void setup() {
 
   setup_ESP();
+  
+  pinMode(switchPin, INPUT);
+
+  Serial.setTimeout(4000);
 
   connect_AP("RMSF", "123456789");
 
-  tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+  /*tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
 
-  tcp_POST("word=<h1>BENFICA VAI GANHAR</h1>", "/ist179069/IoTLocker/get.php", "web.tecnico.ulisboa.pt");
-
-  disconnect_AP();
+  tcp_POST("word=<h1>BENFICA VAI GANHAR</h1>", "/ist179069/IoTLocker/arduino_test/get.php", "web.tecnico.ulisboa.pt");
+  */
+  /*disconnect_AP();*/
 
 
 
@@ -140,5 +149,21 @@ void setup() {
 
 void loop() {
   
-}
+  if(digitalRead(switchPin) == LOW){
 
+    tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+
+    tcp_POST("word=<h1>INTRUDER DETECTED</h1>", "/ist179069/IoTLocker/arduino_test/get.php", "web.tecnico.ulisboa.pt");
+    Serial.setTimeout(100000);
+    Serial.readBytes(receivedserial, 2000);
+     Serial.setTimeout(4000);
+  }else{
+    tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+
+    tcp_POST("word=<h1>DOOR CLOSED</h1>", "/ist179069/IoTLocker/arduino_test/get.php", "web.tecnico.ulisboa.pt");
+    Serial.setTimeout(100000);
+    Serial.readBytes(receivedserial, 2000);
+     Serial.setTimeout(4000);
+  }
+
+}
