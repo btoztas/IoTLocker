@@ -19,7 +19,7 @@
  
 
 
-char receivedserial[2000];
+char receivedserial[500];
 const int switchPin = 2;
 const int CH_PD = 5;
 
@@ -136,6 +136,7 @@ void setup() {
   Serial.setTimeout(4000);
 
   connect_AP("RMSF", "123456789");
+  digitalWrite(switchPin,HIGH);
 
   /*tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
 
@@ -153,17 +154,20 @@ void loop() {
 
     tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
 
-    tcp_POST("word=<h1>INTRUDER DETECTED</h1>", "/ist179069/IoTLocker/arduino_test/get.php", "web.tecnico.ulisboa.pt");
-    Serial.setTimeout(100000);
+    tcp_POST("word=<h1>INTRUDER DETECTED</h1>", "/ist179069/IoTLocker/get.php", "web.tecnico.ulisboa.pt");
+    Serial.setTimeout(10000);
     Serial.readBytes(receivedserial, 2000);
-     Serial.setTimeout(4000);
+    tcp_DISCONNECT();
+    Serial.setTimeout(4000);
   }else{
     tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
 
-    tcp_POST("word=<h1>DOOR CLOSED</h1>", "/ist179069/IoTLocker/arduino_test/get.php", "web.tecnico.ulisboa.pt");
-    Serial.setTimeout(100000);
+    tcp_POST("word=<h1>DOOR CLOSED</h1>", "/ist179069/IoTLocker/get.php", "web.tecnico.ulisboa.pt");
+    Serial.setTimeout(10000);
     Serial.readBytes(receivedserial, 2000);
-     Serial.setTimeout(4000);
+    tcp_DISCONNECT();
+    Serial.setTimeout(4000);
+    
   }
 
 }

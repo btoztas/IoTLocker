@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayUseLogoEnabled(true);
     }
 
-        public void goToAddUser(View view)
+    public void goToAddUser(View view)
     {
-        Intent intent = new Intent(MainActivity.this, AddUser.class);
+        Intent intent = new Intent(MainActivity.this, AddUserActivity.class);
         startActivity(intent);
     }
 
@@ -36,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
     public void goToUsers(View view)
     {
         Intent intent = new Intent(MainActivity.this, UsersActivity.class);
+        startActivity(intent);
+    }
+    public void goToRemoveUser(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, RemoveUserActivity.class);
         startActivity(intent);
     }
 }

@@ -30,13 +30,23 @@
                 android:textSize="25sp"
                 android:onClick="goToAddUser"
                 />
+            <Button
+                android:id="@+id/rmvusersbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewuserbutton"
+                android:layout_centerHorizontal="true"
+                android:text="Remove Users"
+                android:textSize="25sp"
+                android:onClick="goToRemoveUser"
+                />
 
             <Button
                 android:id="@+id/checkAlertsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/check_alerts"
-                android:layout_below="@id/addnewuserbutton"
+                android:layout_below="@id/rmvusersbutton"
                 android:layout_centerHorizontal="true"
                 android:textSize="25sp"
                 android:onClick="goToAlerts"

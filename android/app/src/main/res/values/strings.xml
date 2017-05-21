@@ -100,4 +100,6 @@
     <string name="title_activity_add_user">AddUser</string>
     <string name="user_name">User Name</string>
     <string name="add_user">Add user</string>
+    <string name="title_activity_remove_user">RemoveUserActivity</string>
+    <string name="add_new_user">Add new user</string>
 </resources>

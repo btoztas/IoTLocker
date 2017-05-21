@@ -1,8 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/adduserview"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true">
 
+    <TextView
+        android:id="@+id/title"
+        android:text="@string/add_new_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:padding="20dp"
+        android:layout_centerHorizontal="true"
+        />
 
     <TextView
         android:id="@+id/user_name_title"
@@ -10,6 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:padding="10dp"
+
+        android:layout_below="@id/title"
         android:text="@string/user_name"
         android:textAlignment="center"
         android:textSize="40dp" />

@@ -46,8 +46,12 @@
         <activity android:name=".AlertsActivity" />
         <activity android:name=".UsersActivity" />
         <activity
-            android:name=".AddUser"
+            android:name=".AddUserActivity"
             android:label="@string/title_activity_add_user"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RemoveUserActivity"
+            android:label="@string/title_activity_remove_user"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -24,7 +24,8 @@
         ");
 
   }else{
-    echo("<center><h3>Something went wrong</h3></center>");
+    echo("<center><h3>Something went wrong when trying to add new alert: id $id</h3></center>");
+    echo($connection->errorInfo());
   }
   $connection = NULL;
 ?>

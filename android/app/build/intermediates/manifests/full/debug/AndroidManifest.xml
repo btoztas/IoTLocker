@@ -66,8 +66,12 @@
         <activity android:name="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.AlertsActivity" />
         <activity android:name="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.UsersActivity" />
         <activity
-            android:name="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.AddUser"
+            android:name="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.AddUserActivity"
             android:label="@string/title_activity_add_user"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="pt.ulisboa.tecnico.rmsf.locker.iot.iotlocker.RemoveUserActivity"
+            android:label="@string/title_activity_remove_user"
             android:theme="@style/AppTheme.NoActionBar" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
