@@ -43,18 +43,16 @@ void send_ESP(String command) {
 
 }
 
-String recv_ESP(){
-
-
-
-
-}
-
 void connect_AP(String ap, String password){
 
   String command = "AT+CWJAP_CUR=\""+ap+"\",\""+password+"\"";
   send_ESP(command);
-  delay(10000);
+  if(Serial.find("OK")){
+      delay(5000);
+  }else{
+    delay(5000);
+    connect_AP(ap, password);
+  }
 
 }
 
@@ -70,7 +68,12 @@ void tcp_CONNECT(String serv, int port){
 
   String command = "AT+CIPSTART=\"TCP\",\""+serv+"\","+port;
   send_ESP(command);
-  delay(10000);
+  if(Serial.find("OK")){
+    delay(5000);
+  }else{
+    delay(5000);
+    tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+  }
 
 }
 
@@ -118,6 +121,7 @@ void tcp_GET(String url, String host){
 }
 
 int status_ESP(){
+
   send_ESP("AT+CIPSTATUS");
 
 }

@@ -6,7 +6,7 @@ void setup() {
 }
 
 void loop() {
-  
+
   if(digitalRead(switchPin)==HIGH)
     Serial.println("CLOSED!");
   else

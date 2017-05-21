@@ -16,12 +16,20 @@
  *
  *  word=IMACOMMENT
  */
- 
 
 
-char receivedserial[500];
+#include <SPI.h>
+#include <MFRC522.h>
+
+#define SS_PIN 10
+#define RST_PIN 9
+MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
+
+char receivedserial[200];
 const int switchPin = 2;
 const int CH_PD = 5;
+int flag;
+int alerta1;
 
 void setup_ESP(){
 
@@ -51,10 +59,12 @@ void connect_AP(String ap, String password){
 
   String command = "AT+CWJAP_CUR=\""+ap+"\",\""+password+"\"";
   send_ESP(command);
+  
+  Serial.setTimeout(10000);
   if(Serial.find("OK")){
-      delay(5000);
+    delay(1000);
   }else{
-    connect_AP("RMSF", "123456789");
+    connect_AP(ap, password);
   }
 
 }
@@ -71,10 +81,12 @@ void tcp_CONNECT(String serv, int port){
 
   String command = "AT+CIPSTART=\"TCP\",\""+serv+"\","+port;
   send_ESP(command);
+  
+  Serial.setTimeout(6000);
   if(Serial.find("OK")){
-      delay(5000);
+    delay(3000);
   }else{
-    tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+    tcp_CONNECT(serv, port);
   }
 
 }
@@ -123,6 +135,7 @@ void tcp_GET(String url, String host){
 }
 
 int status_ESP(){
+
   send_ESP("AT+CIPSTATUS");
 
 }
@@ -133,8 +146,11 @@ void setup() {
   
   pinMode(switchPin, INPUT);
 
-  Serial.setTimeout(4000);
+  SPI.begin();      // Initiate  SPI bus
+ 
 
+  Serial.setTimeout(4000);
+  digitalWrite(switchPin, HIGH);
   connect_AP("RMSF", "123456789");
   digitalWrite(switchPin,HIGH);
 
@@ -143,31 +159,74 @@ void setup() {
   tcp_POST("word=<h1>BENFICA VAI GANHAR</h1>", "/ist179069/IoTLocker/arduino_test/get.php", "web.tecnico.ulisboa.pt");
   */
   /*disconnect_AP();*/
-
-
-
+  
+  
 }
 
 void loop() {
+
+  //IDLE STATE
   
-  if(digitalRead(switchPin) == LOW){
+  int card_detected=0;
+  int currentTime;
+  int cleared=0;
+  mfrc522.PCD_Init();   // Initiate MFRC522
 
-    tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
-
-    tcp_POST("word=<h1>INTRUDER DETECTED</h1>", "/ist179069/IoTLocker/get.php", "web.tecnico.ulisboa.pt");
-    Serial.setTimeout(10000);
-    Serial.readBytes(receivedserial, 2000);
-    tcp_DISCONNECT();
-    Serial.setTimeout(4000);
-  }else{
-    tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
-
-    tcp_POST("word=<h1>DOOR CLOSED</h1>", "/ist179069/IoTLocker/get.php", "web.tecnico.ulisboa.pt");
-    Serial.setTimeout(10000);
-    Serial.readBytes(receivedserial, 2000);
-    tcp_DISCONNECT();
-    Serial.setTimeout(4000);
+  
+  if(digitalRead(switchPin) == HIGH){
     
-  }
+    currentTime = millis();
 
+    while(currentTime<30000){
+      
+      flag=0;
+      currentTime = millis();
+      if (!mfrc522.PICC_IsNewCardPresent()){
+        flag=1;
+      }
+      if (!mfrc522.PICC_ReadCardSerial()){
+        flag=1;
+      }
+      
+      if(flag==0){
+        
+          String content= "";
+          byte letter;
+          
+          for (byte i = 0; i < mfrc522.uid.size; i++){
+             //content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
+             content.concat(String(mfrc522.uid.uidByte[i], HEX));
+          }
+          
+          content.toUpperCase();
+          
+          String tosend= "id=" + content;
+          tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+          tcp_POST(tosend, "/ist179069/IoTLocker/add_checkin.php", "web.tecnico.ulisboa.pt");
+          
+          Serial.setTimeout(10000);
+          
+          if(Serial.find("DENIED")){
+            
+            
+            
+          }else{
+
+            
+            
+          }
+          
+          tcp_DISCONNECT();
+      }
+    }
+    
+    if(flag==1){
+      
+      // DOOR OPENED, NO AUTHENTICATION
+      tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+      tcp_POST("id=2", "/ist179069/IoTLocker/add_alert.php", "web.tecnico.ulisboa.pt");
+      tcp_DISCONNECT();
+      
+    }
+  }
 }
