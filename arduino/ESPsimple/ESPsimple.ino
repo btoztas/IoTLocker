@@ -106,11 +106,11 @@ void tcp_POST(String message, String dir, String host){
 
 void tcp_GET(String url, String host){
 
-  String total = "GET "+url+" HTTP/1.1\r\nHost: "+host+"\r\nUser-Agent: ESP8266\r\n\r\n";
+  String total = "GET "+url+" HTTP/1.1\r\nHost: "+host+"\r\n\r\n";
   String gte[3];
   gte[0] = "GET "+url+" HTTP/1.1";
   gte[1] = "Host: "+host;
-  gte[2] = "User-Agent: ESP8266\r\n";
+  gte[2] = "";
 
   String command = "AT+CIPSEND="+(String)total.length();
   send_ESP(command);
@@ -130,11 +130,11 @@ void setup() {
 
   setup_ESP();
 
-  connect_AP("RMSF", "123456789");
+  connect_AP("falafel_p9", "test12345");
 
   tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
 
-  tcp_POST("word=<h1>BENFICA VAI GANHAR</h1>", "/ist179069/IoTLocker/get.php", "web.tecnico.ulisboa.pt");
+  tcp_GET("/ist179069/IoTLocker/test.html", "web.tecnico.ulisboa.pt");
 
   disconnect_AP();
 

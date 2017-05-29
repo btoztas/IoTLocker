@@ -95,7 +95,7 @@ void tcp_DISCONNECT(){
 
   String command = "AT+CIPCLOSE";
   send_ESP(command);
-  delay(2500);
+  delay(500);
 
 }
 
@@ -115,7 +115,7 @@ void tcp_POST(String message, String dir, String host){
     send_ESP(post[i]);
   }
 
-  delay(2500);
+  delay(500);
 }
 
 void tcp_GET(String url, String host){
@@ -168,19 +168,21 @@ void loop() {
   //IDLE STATE
   
   int card_detected=0;
-  int currentTime;
+  int currentTime, elapsedTime;
   int cleared=0;
   mfrc522.PCD_Init();   // Initiate MFRC522
 
   
   if(digitalRead(switchPin) == HIGH){
     
-    currentTime = millis();
+    elapsedTime = currentTime = millis();
+    
 
-    while(currentTime<30000){
+    while(currentTime-elapsedTime<30000){
       
       flag=0;
       currentTime = millis();
+      
       if (!mfrc522.PICC_IsNewCardPresent()){
         flag=1;
       }
