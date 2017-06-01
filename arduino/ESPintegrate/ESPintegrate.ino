@@ -25,25 +25,17 @@
 #define RST_PIN 9
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
 
+#define RED_PIN 6
+#define GREEN_PIN 7
+#define YELLOW_PIN 8
+
 char receivedserial[200];
 const int switchPin = 2;
 const int CH_PD = 5;
 int flag;
 int alerta1;
 
-void setup_ESP(){
 
-  Serial.begin(115200);
-
-  pinMode(CH_PD, OUTPUT);
-
-  digitalWrite(CH_PD, LOW);
-  delay(1000);
-  digitalWrite(CH_PD, HIGH);
-  delay(2500);
-
-
-}
 
 void send_ESP(String command) {
 
@@ -52,6 +44,30 @@ void send_ESP(String command) {
   Serial.print(command);
   Serial.print("\r\n");
   delay(500);
+
+}
+void send_ESP_NoDelay(String command) {
+
+  //Serial.print("\r\n\n******* ENVIADO *******\r\n"+command+"\r\n***********************\r\n\n");
+
+  Serial.print(command);
+  Serial.print("\r\n");
+  delay(500);
+
+}
+
+void setup_ESP(){
+
+  Serial.begin(115200);
+  
+  pinMode(CH_PD, OUTPUT);
+
+  digitalWrite(CH_PD, LOW);
+  delay(1000);
+  digitalWrite(CH_PD, HIGH);
+  delay(2500);
+
+  send_ESP("AT+RST");
 
 }
 
@@ -84,6 +100,8 @@ void tcp_CONNECT(String serv, int port){
   
   Serial.setTimeout(6000);
   if(Serial.find("OK")){
+    delay(500);
+  }else if(Serial.find("")){
     delay(3000);
   }else{
     tcp_CONNECT(serv, port);
@@ -111,11 +129,10 @@ void tcp_POST(String message, String dir, String host){
   post[5] = message + "\r\n";
   String command = "AT+CIPSEND="+(String)total.length();
   send_ESP(command);
-  for(int i=0; i<6; i++){
+  for(int i=0; i<5; i++){
     send_ESP(post[i]);
   }
-
-  delay(500);
+  send_ESP_NoDelay(post[5]);
 }
 
 void tcp_GET(String url, String host){
@@ -140,19 +157,35 @@ int status_ESP(){
 
 }
 
+
+
 void setup() {
 
   setup_ESP();
   
   pinMode(switchPin, INPUT);
+  pinMode(RED_PIN, OUTPUT);
+  pinMode(GREEN_PIN, OUTPUT);
+  pinMode(YELLOW_PIN, OUTPUT);
 
   SPI.begin();      // Initiate  SPI bus
- 
+  digitalWrite(RED_PIN, HIGH);
+  digitalWrite(GREEN_PIN, HIGH);
+  digitalWrite(YELLOW_PIN, HIGH);
 
   Serial.setTimeout(4000);
   digitalWrite(switchPin, HIGH);
-  connect_AP("RMSF", "123456789");
-  digitalWrite(switchPin,HIGH);
+  digitalWrite(RED_PIN, LOW);
+  digitalWrite(GREEN_PIN, LOW);
+  digitalWrite(YELLOW_PIN, LOW);
+  setup_ESP();
+   digitalWrite(RED_PIN, HIGH);
+  digitalWrite(GREEN_PIN, HIGH);
+  digitalWrite(YELLOW_PIN, HIGH);
+  connect_AP("GONCALVES", "abrunheira123");
+  digitalWrite(RED_PIN, LOW);
+  digitalWrite(GREEN_PIN, LOW);
+  digitalWrite(YELLOW_PIN, LOW);
 
   /*tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
 
@@ -166,7 +199,9 @@ void setup() {
 void loop() {
 
   //IDLE STATE
-  
+  digitalWrite(RED_PIN, LOW);
+  digitalWrite(GREEN_PIN, LOW);
+  digitalWrite(YELLOW_PIN, LOW);
   int card_detected=0;
   int currentTime, elapsedTime;
   int cleared=0;
@@ -174,9 +209,11 @@ void loop() {
 
   
   if(digitalRead(switchPin) == HIGH){
-    
-    elapsedTime = currentTime = millis();
-    
+    digitalWrite(RED_PIN, LOW);
+    digitalWrite(GREEN_PIN, LOW);
+    digitalWrite(YELLOW_PIN, HIGH);
+    elapsedTime = currentTime = millis();    
+       
 
     while(currentTime-elapsedTime<30000){
       
@@ -191,7 +228,6 @@ void loop() {
       }
       
       if(flag==0){
-        
           String content= "";
           byte letter;
           
@@ -210,15 +246,19 @@ void loop() {
           
           if(Serial.find("DENIED")){
             
-            
+            digitalWrite(YELLOW_PIN, LOW);
+            digitalWrite(RED_PIN, HIGH);
+            delay(6000);
             
           }else{
-
-            
-            
+    
+            digitalWrite(YELLOW_PIN, LOW);
+            digitalWrite(GREEN_PIN, HIGH);        
+            delay(6000);
           }
           
           tcp_DISCONNECT();
+          break;
       }
     }
     
