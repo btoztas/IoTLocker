@@ -25,6 +25,7 @@ public class UsersActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users);
         listview = (ListView) findViewById(R.id.users_list);
+
         client = new AsyncHttpClient();
         client.get(UsersActivity.this, url, new AsyncHttpResponseHandler() {
             @Override
