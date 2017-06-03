@@ -14,6 +14,20 @@
 
   $id = $_POST['id'];
 
+
+  $stmt = $connection->prepare("DELETE FROM checkin WHERE id = :id");
+  $stmt->bindParam(':id', $id);
+
+  if($stmt->execute()){
+    echo("<center>
+            <h3> Removed acesses with card ID $id</h3>
+          </center>
+        ");
+
+  }else{
+    echo("<center><h3>No stats for user $id</h3></center>");
+  }
+
   $stmt = $connection->prepare("DELETE FROM user WHERE id = :id");
   $stmt->bindParam(':id', $id);
 
@@ -24,9 +38,14 @@
         ");
 
   }else{
-    echo("<center><h3>Something went wrong when trying to add new alert: id $id</h3></center>");
+    echo("<center><h3>Something went wrong when trying to remove user id: $id</h3></center>");
     echo($connection->errorInfo());
   }
+
+
+
+
+
   $connection = NULL;
 ?>
 

@@ -11,7 +11,7 @@
     echo("</p>");
     exit();
   }
-  $sql = "SELECT * FROM checkin NATURAL JOIN user";
+  $sql = "SELECT * FROM checkin NATURAL JOIN user ORDER BY day DESC, hour DESC";
   if($stmt = $connection->prepare($sql))
   {
       $stmt->execute();

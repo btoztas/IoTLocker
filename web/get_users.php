@@ -11,7 +11,7 @@
     echo("</p>");
     exit();
   }
-  $sql = "SELECT * FROM user";
+  $sql = "SELECT * FROM user ORDER BY regday DESC, reghour DESC";
   if($stmt = $connection->prepare($sql))
   {
       $stmt->execute();

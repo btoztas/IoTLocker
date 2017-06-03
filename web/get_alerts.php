@@ -11,7 +11,7 @@
     echo("</p>");
     exit();
   }
-  $sql = "SELECT * FROM alert";
+  $sql = "SELECT * FROM alert ORDER BY day DESC, hour DESC";
   if($stmt = $connection->prepare($sql))
   {
       $stmt->execute();

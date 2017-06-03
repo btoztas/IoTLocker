@@ -1,7 +1,7 @@
 /*
  *  This test will print to a PHP script the content on String say
- *  The URL for the PHP script is: http://web.ist.utl.pt/~ist179069/RMSF/get.php
- *  You can see the result on: http://web.ist.utl.pt/~ist179069/RMSF/left.html
+ *  The URL for the PHP script is: 193.136.128.24/~ist179069/RMSF/get.php
+ *  You can see the result on: 193.136.128.24/~ist179069/RMSF/left.html
  *
  *  The sequence of AT commands is the following:
  *
@@ -46,7 +46,7 @@ void send_ESP(String command) {
 
   Serial.print(command);
   Serial.print("\r\n");
-  delay(500);
+  delay(100);
 
 }
 void send_ESP_NoDelay(String command) {
@@ -96,11 +96,12 @@ void disconnect_AP(){
 }
 
 void tcp_CONNECT(String serv, int port){
-
-  String command = "AT+CIPSTART=\"TCP\",\""+serv+"\","+port;
-  send_ESP(command);
   
   Serial.setTimeout(6000);
+  Serial.flush();
+  String command = "AT+CIPSTART=\"TCP\",\""+serv+"\","+port;
+  send_ESP(command);
+  Serial.flush();
   if(Serial.find("OK")){
     delay(500);
   }else if(Serial.find("")){
@@ -113,14 +114,15 @@ void tcp_CONNECT(String serv, int port){
 
 void tcp_DISCONNECT(){
 
+  Serial.flush();
   String command = "AT+CIPCLOSE";
   send_ESP(command);
-  delay(500);
+  delay(100);
 
 }
 
 void tcp_POST(String message, String dir, String host){
-
+  Serial.flush();
   String total = "POST "+dir+" HTTP/1.1\r\nHost: "+host+"\r\nUser-Agent: ESP8266\r\nContent-Length: "+(String)message.length()+"\r\nContent-Type: application/x-www-form-urlencoded\r\n\r\n"+message+"\r\n";
   String post[6];
   post[0] = "POST "+dir+" HTTP/1.1";
@@ -138,7 +140,7 @@ void tcp_POST(String message, String dir, String host){
 }
 
 void tcp_GET(String url, String host){
-
+  
   String total = "GET "+url+" HTTP/1.1\r\nHost: "+host+"\r\nUser-Agent: ESP8266\r\n\r\n";
   String gte[3];
   gte[0] = "GET "+url+" HTTP/1.1";
@@ -186,14 +188,14 @@ void setup() {
    digitalWrite(RED_PIN, HIGH);
   digitalWrite(GREEN_PIN, HIGH);
   digitalWrite(YELLOW_PIN, HIGH);
-  connect_AP("GONCALVES", "abrunheira123");
+  connect_AP("RAINBOW", "123456789");
   digitalWrite(RED_PIN, LOW);
   digitalWrite(GREEN_PIN, LOW);
   digitalWrite(YELLOW_PIN, LOW);
 
-  /*tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+  /*tcp_CONNECT("web.ist.utl.pt", 80);
 
-  tcp_POST("word=<h1>BENFICA VAI GANHAR</h1>", "/ist179069/IoTLocker/arduino_test/get.php", "web.tecnico.ulisboa.pt");
+  tcp_POST("word=<h1>BENFICA VAI GANHAR</h1>", "/ist179069/IoTLocker/arduino_test/get.php", "web.ist.utl.pt");
   */
   /*disconnect_AP();*/
   
@@ -209,6 +211,7 @@ void loop() {
   int card_detected=0;
   int currentTime, elapsedTime;
   int cleared=0;
+  int waitresp_time;
   int i;
   mfrc522.PCD_Init();   // Initiate MFRC522
 
@@ -218,20 +221,23 @@ void loop() {
       tone(BUZZ, 1000);
       delay(200);
       noTone(BUZZ);
-      delay(1000/i);
+      delay(1000/(2*i));
       tone(BUZZ, 1000);
       delay(200);
       noTone(BUZZ);
-      delay(1000/i);
+      delay(1000/(2*i));
       tone(BUZZ, 1000);
       delay(200);
       noTone(BUZZ);
-      delay(1000/i);
+      delay(1000/(2*i));
       tone(BUZZ, 1000);
       delay(200);
       noTone(BUZZ);
-      delay(1000/i);
+      delay(1000/(2*i));
     }
+    tone(BUZZ, 1000);
+    delay(1000);
+    noTone(BUZZ);
     digitalWrite(YELLOW_PIN, LOW);
   }
 
@@ -270,26 +276,39 @@ void loop() {
           content.toUpperCase();
           
           String tosend= "id=" + content;
-          tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+          tcp_CONNECT("193.136.128.24", 80);
           tcp_POST(tosend, "/ist179069/IoTLocker/add_checkin.php", "web.tecnico.ulisboa.pt");
           
           Serial.setTimeout(10000);
+          Serial.find("ACCESS");
           
+          Serial.setTimeout(500);
           if(Serial.find("DENIED")){
-            
+            tcp_DISCONNECT();
             digitalWrite(YELLOW_PIN, LOW);
             digitalWrite(RED_PIN, HIGH);
-            tone(BUZZ, 1000);
-            delay(6000);
-            noTone(BUZZ);            
+            tone(BUZZ, 500);
+            delay(5000);
+            noTone(BUZZ);
+            
+                   
           }else{
-    
+            tcp_DISCONNECT();
             digitalWrite(YELLOW_PIN, LOW);
-            digitalWrite(GREEN_PIN, HIGH);        
-            delay(6000);
+            digitalWrite(GREEN_PIN, HIGH);
+            tone(BUZZ, 2500);
+            delay(350);
+            noTone(BUZZ);            
+            delay(300);
+            tone(BUZZ, 2500);
+            delay(350);
+            noTone(BUZZ);
+            delay(300);
+            tone(BUZZ, 2500);
+            delay(350);
+            noTone(BUZZ);
           }
           
-          tcp_DISCONNECT();
           break;
       }
     }
@@ -297,14 +316,14 @@ void loop() {
     if(flag==1){
       
       // DOOR OPENED, NO AUTHENTICATION
-      tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
+      tcp_CONNECT("193.136.128.24", 80);
       tcp_POST("id=2", "/ist179069/IoTLocker/add_alert.php", "web.tecnico.ulisboa.pt");
       tcp_DISCONNECT();
       digitalWrite(YELLOW_PIN, LOW);
       digitalWrite(RED_PIN, HIGH);
-      tone(BUZZ, 1000);
-      delay(6000);
-      noTone(BUZZ); 
+      tone(BUZZ, 500);
+      delay(5000);
+      noTone(BUZZ);
       
     }
   }

@@ -36,10 +36,7 @@
 
 
   if($stmt->execute()){
-    echo("<center>
-            <h3> Added new alert: id $id @ $day @ $hour @ $description</h3>
-          </center>
-        ");
+    echo("ADDED ALERT");
 
   }else{
     echo("<center><h3>Something went wrong when trying to add new alert: id $id @ $day @ $hour @ $description</h3></center>");
@@ -54,7 +51,7 @@
   }
 
 	$message_status = send_notification($tokens, $description);
-	echo $message_status;
+	//echo $message_status;
 
 
 
@@ -63,8 +60,3 @@
 
 
 ?>
-
-
-<center>
-  <a href="index.php">Home</a>
-</center>
