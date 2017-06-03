@@ -29,6 +29,9 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
 #define GREEN_PIN 7
 #define YELLOW_PIN 8
 
+#define BUZZ 3
+#define BUTTON 4
+
 char receivedserial[200];
 const int switchPin = 2;
 const int CH_PD = 5;
@@ -52,7 +55,6 @@ void send_ESP_NoDelay(String command) {
 
   Serial.print(command);
   Serial.print("\r\n");
-  delay(500);
 
 }
 
@@ -167,6 +169,8 @@ void setup() {
   pinMode(RED_PIN, OUTPUT);
   pinMode(GREEN_PIN, OUTPUT);
   pinMode(YELLOW_PIN, OUTPUT);
+  pinMode(BUZZ, OUTPUT);
+  pinMode(BUZZ, INPUT);
 
   SPI.begin();      // Initiate  SPI bus
   digitalWrite(RED_PIN, HIGH);
@@ -205,7 +209,31 @@ void loop() {
   int card_detected=0;
   int currentTime, elapsedTime;
   int cleared=0;
+  int i;
   mfrc522.PCD_Init();   // Initiate MFRC522
+
+  if(digitalRead(BUTTON)){
+    digitalWrite(YELLOW_PIN, HIGH);
+    for(i=1;i<15;i++){
+      tone(BUZZ, 1000);
+      delay(200);
+      noTone(BUZZ);
+      delay(1000/i);
+      tone(BUZZ, 1000);
+      delay(200);
+      noTone(BUZZ);
+      delay(1000/i);
+      tone(BUZZ, 1000);
+      delay(200);
+      noTone(BUZZ);
+      delay(1000/i);
+      tone(BUZZ, 1000);
+      delay(200);
+      noTone(BUZZ);
+      delay(1000/i);
+    }
+    digitalWrite(YELLOW_PIN, LOW);
+  }
 
   
   if(digitalRead(switchPin) == HIGH){
@@ -216,7 +244,10 @@ void loop() {
        
 
     while(currentTime-elapsedTime<30000){
-      
+      tone(BUZZ, 1000);
+      delay(200);
+      noTone(BUZZ);
+      delay(200); 
       flag=0;
       currentTime = millis();
       
@@ -248,8 +279,9 @@ void loop() {
             
             digitalWrite(YELLOW_PIN, LOW);
             digitalWrite(RED_PIN, HIGH);
+            tone(BUZZ, 1000);
             delay(6000);
-            
+            noTone(BUZZ);            
           }else{
     
             digitalWrite(YELLOW_PIN, LOW);
@@ -268,6 +300,11 @@ void loop() {
       tcp_CONNECT("web.tecnico.ulisboa.pt", 80);
       tcp_POST("id=2", "/ist179069/IoTLocker/add_alert.php", "web.tecnico.ulisboa.pt");
       tcp_DISCONNECT();
+      digitalWrite(YELLOW_PIN, LOW);
+      digitalWrite(RED_PIN, HIGH);
+      tone(BUZZ, 1000);
+      delay(6000);
+      noTone(BUZZ); 
       
     }
   }
