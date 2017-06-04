@@ -222,7 +222,7 @@ void setup() {
    digitalWrite(RED_PIN, HIGH);
   digitalWrite(GREEN_PIN, HIGH);
   digitalWrite(YELLOW_PIN, HIGH);
-  connect_AP("RAINBOW", "123456789");
+  connect_AP("GONCALVES", "abrunheira123");
   digitalWrite(RED_PIN, LOW);
   digitalWrite(GREEN_PIN, LOW);
   digitalWrite(YELLOW_PIN, LOW);
@@ -283,10 +283,6 @@ void loop() {
       noTone(BUZZ);
       delay(1000/(2*i));
     }
-    tone(BUZZ, 1000);
-    delay(1000);
-    noTone(BUZZ);
-    digitalWrite(YELLOW_PIN, LOW);
     users_in--;
   }
 
