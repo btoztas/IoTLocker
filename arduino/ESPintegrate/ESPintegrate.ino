@@ -17,6 +17,8 @@
  *  word=IMACOMMENT
  */
 
+#include <SparkFunTSL2561.h>
+#include <Wire.h>
 
 #include <SPI.h>
 #include <MFRC522.h>
@@ -38,6 +40,9 @@ const int CH_PD = 5;
 int flag;
 int alerta1;
 
+SFE_TSL2561 light;
+
+unsigned int ms;
 
 
 void send_ESP(String command) {
@@ -101,6 +106,7 @@ void tcp_CONNECT(String serv, int port){
   Serial.flush();
   String command = "AT+CIPSTART=\"TCP\",\""+serv+"\","+port;
   send_ESP(command);
+  delay(500);
   Serial.flush();
   if(Serial.find("OK")){
     delay(500);
@@ -161,12 +167,40 @@ int status_ESP(){
 
 }
 
+int gain = 0;
+int setup_TSL(){
+
+  light.begin();
+  light.setTiming(gain,2,ms);
+  light.setPowerUp();
+  
+}
+
+
+
+int card_detected=0;
+int currentTime, elapsedTime;
+int cleared=0;
+int waitresp_time;
+int i;
+int users_in;
+double prev_lux, act_lux;
+unsigned int data0, data1;
 
 
 void setup() {
 
+  users_in = 0;
+  setup_TSL();
+
+
+  if (light.getData(data0,data1)){
+    
+    light.getLux(gain,ms,data0,data1,prev_lux);
+    
+  }
   setup_ESP();
-  
+ 
   pinMode(switchPin, INPUT);
   pinMode(RED_PIN, OUTPUT);
   pinMode(GREEN_PIN, OUTPUT);
@@ -208,12 +242,26 @@ void loop() {
   digitalWrite(RED_PIN, LOW);
   digitalWrite(GREEN_PIN, LOW);
   digitalWrite(YELLOW_PIN, LOW);
-  int card_detected=0;
-  int currentTime, elapsedTime;
-  int cleared=0;
-  int waitresp_time;
-  int i;
-  mfrc522.PCD_Init();   // Initiate MFRC522
+
+ 
+  
+  
+  if (users_in == 0 && light.getData(data0,data1)){
+    
+    light.getLux(gain,ms,data0,data1,act_lux);
+    
+    if(act_lux - prev_lux > 30){
+      digitalWrite(YELLOW_PIN, LOW);
+      digitalWrite(RED_PIN, HIGH);
+      tone(BUZZ, 500);
+      tcp_CONNECT("193.136.128.24", 80);
+      tcp_POST("id=3", "/ist179069/IoTLocker/add_alert.php", "web.tecnico.ulisboa.pt");
+      delay(3000);
+      tcp_DISCONNECT();
+      noTone(BUZZ);
+    }
+    
+  }
 
   if(digitalRead(BUTTON)){
     digitalWrite(YELLOW_PIN, HIGH);
@@ -239,15 +287,19 @@ void loop() {
     delay(1000);
     noTone(BUZZ);
     digitalWrite(YELLOW_PIN, LOW);
+    users_in--;
   }
 
   
   if(digitalRead(switchPin) == HIGH){
+
+     mfrc522.PCD_Init();   // Initiate MFRC522
+    
     digitalWrite(RED_PIN, LOW);
     digitalWrite(GREEN_PIN, LOW);
     digitalWrite(YELLOW_PIN, HIGH);
     elapsedTime = currentTime = millis();    
-       
+    
 
     while(currentTime-elapsedTime<30000){
       tone(BUZZ, 1000);
@@ -307,6 +359,7 @@ void loop() {
             tone(BUZZ, 2500);
             delay(350);
             noTone(BUZZ);
+            users_in++;
           }
           
           break;
